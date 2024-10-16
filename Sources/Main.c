@@ -101,6 +101,11 @@ int main(int argc, char *argv[])
 				case SDL_QUIT:
 					return EXIT_SUCCESS;
 				
+				case SDL_KEYDOWN:
+					// Quit program
+					if (Event.key.keysym.sym == SDLK_q) return EXIT_SUCCESS;
+					break;
+			
 				// Unhandled event, do nothing
 				default:
 					break;
